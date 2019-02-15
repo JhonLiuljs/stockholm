@@ -273,7 +273,8 @@ class Stockholm(object):
                 if (not is_retry):
                     counter.append(1)
 
-            except:
+            except Exception as e:
+                print(e)
                 print("Error: Failed to load stock data... " + quote['Symbol'] + "/" + quote['Name'] + "\n")
                 if (not is_retry):
                     time.sleep(2)
